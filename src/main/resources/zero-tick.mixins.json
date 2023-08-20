@@ -17,6 +17,7 @@
     "NetherWartBlockMixin",
     "RedstoneOreBlockMixin",
     "SugarCaneBlockMixin",
-    "SweetBerryBushBlockMixin"
+    "SweetBerryBushBlockMixin",
+    "VineBlockMixin"
   ]
 }
