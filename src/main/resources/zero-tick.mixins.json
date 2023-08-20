@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "dev.tildejustin.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "AbstractPlantStemBlockMixin",
+    "BambooBlockMixin",
+    "SugarCaneBlockMixin",
+    "SweetBerryBushBlockMixin"
+  ]
+}

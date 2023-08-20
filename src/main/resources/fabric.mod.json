@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "zero-tick",
+  "version": "${version}",
+  "name": "0-tick",
+  "description": "Reverts MC-113809 fix",
+  "authors": [
+    "tildejustin"
+  ],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/zero-tick",
+		"sources": "https://github.com/tildejustin/zero-tick",
+		"issues": "https://github.com/tildejustin/zero-tick/issues"
+	},
+  "license": "MIT",
+  "environment": "*",
+  "mixins": [
+    "zero-tick.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.16-alpha.20.12.a"
+  }
+}
