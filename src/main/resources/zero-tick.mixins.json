@@ -8,6 +8,14 @@
   "mixins": [
     "AbstractPlantStemBlockMixin",
     "BambooBlockMixin",
+    "CactusBlockMixin",
+    "ChorusFlowerBlockMixin",
+    "CocoaBlockMixin",
+    "CropBlockMixin",
+    "FarmlandBlockMixin",
+    "FluidBlockMixin",
+    "NetherWartBlockMixin",
+    "RedstoneOreBlockMixin",
     "SugarCaneBlockMixin",
     "SweetBerryBushBlockMixin"
   ]

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "zero-tick",
+  "id": "${mod_id}",
   "version": "${version}",
-  "name": "0-tick",
+  "name": "${mod_name}",
   "description": "Reverts MC-113809 fix",
   "authors": [
     "tildejustin"

@@ -12,7 +12,8 @@ import java.util.Random;
 
 @Mixin(AbstractPlantStemBlock.class)
 public abstract class AbstractPlantStemBlockMixin {
-    @Shadow public abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
+    @Shadow
+    public abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
 
     @Overwrite
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
