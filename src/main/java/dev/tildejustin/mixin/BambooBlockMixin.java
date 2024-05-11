@@ -1,19 +1,15 @@
 package dev.tildejustin.mixin;
 
-import net.minecraft.block.BambooBlock;
-import net.minecraft.block.BlockState;
+import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
-
-import java.util.Random;
+import net.minecraft.util.math.random.Random;
+import org.spongepowered.asm.mixin.*;
 
 @Mixin(BambooBlock.class)
 public abstract class BambooBlockMixin {
     @Shadow
-    public abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
+    protected abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
 
     @Overwrite
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
