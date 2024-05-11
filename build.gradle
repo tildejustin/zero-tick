@@ -1,13 +1,11 @@
 plugins {
 	id "fabric-loom" version "$loom_version"
-	id "io.github.juuxel.loom-vineflower" version "$loom_vineflower_version"
 }
 
 version = "$mod_version+$target_version"
 
 base {
-	//noinspection GrDeprecatedAPIUsage
-	archivesBaseName = archives_base_name
+	archivesName = archives_name
 }
 
 repositories {
@@ -16,15 +14,11 @@ repositories {
 
 dependencies {
 	minecraft "com.mojang:minecraft:$minecraft_version"
-	mappings "com.github.RedLime:yarn:${minecraft_version}.build.$yarn_build:v2"
+	mappings "net.fabricmc:yarn:${minecraft_version}+build.$yarn_build:v2"
 	modImplementation "net.fabricmc:fabric-loader:$loader_version"
 }
 
 processResources {
-	inputs.property "version", version
-	inputs.property "mod_id", mod_id
-	inputs.property "mod_name", mod_name
-
 	filesMatching("fabric.mod.json") {
 		expand "version": version, "mod_id": mod_id, "mod_name": mod_name
 	}
@@ -32,21 +26,17 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
-	it.options.release.set(8)
+	it.options.release.set(21)
 }
 
 java {
 	// withSourcesJar()
-	sourceCompatibility = JavaVersion.VERSION_1_8
-	targetCompatibility = JavaVersion.VERSION_1_8
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {
 	from("LICENSE") {
 		rename { "${it}_${base.archivesName.get()}" }
 	}
-}
-
-vineflower {
-	toolVersion = vineflower_version
 }

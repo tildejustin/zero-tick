@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "dev.tildejustin.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_21",
   "injectors": {
     "defaultRequire": 1
   },
