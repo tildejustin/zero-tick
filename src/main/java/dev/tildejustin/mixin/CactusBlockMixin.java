@@ -6,7 +6,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.*;
 
-@Mixin(CactusBlock.class)
+@Mixin(value = CactusBlock.class, priority = 900)
 public abstract class CactusBlockMixin {
     @Shadow
     public abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);

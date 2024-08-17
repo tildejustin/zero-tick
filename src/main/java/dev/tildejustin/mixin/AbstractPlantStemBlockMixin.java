@@ -7,7 +7,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import org.spongepowered.asm.mixin.*;
 
-@Mixin(AbstractPlantStemBlock.class)
+@Mixin(value = AbstractPlantStemBlock.class, priority = 900)
 public abstract class AbstractPlantStemBlockMixin extends AbstractPlantPartBlock {
     protected AbstractPlantStemBlockMixin(Settings settings, Direction growthDirection, VoxelShape outlineShape, boolean tickWater) {
         super(settings, growthDirection, outlineShape, tickWater);
