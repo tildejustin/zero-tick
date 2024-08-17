@@ -16,7 +16,7 @@ public abstract class FarmlandBlockMixin {
     }
 
     @Shadow
-    protected abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
+    public abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
 
     @Overwrite
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {

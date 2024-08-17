@@ -13,7 +13,7 @@ public abstract class CropBlockMixin extends PlantBlock {
     }
 
     @Shadow
-    protected abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
+    public abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
 
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {

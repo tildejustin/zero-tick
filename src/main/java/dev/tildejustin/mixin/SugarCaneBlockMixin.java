@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.*;
 @Mixin(SugarCaneBlock.class)
 public abstract class SugarCaneBlockMixin {
     @Shadow
-    protected abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
+    public abstract void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random);
 
     @Overwrite
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
